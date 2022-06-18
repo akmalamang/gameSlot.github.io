@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <title>Deacode - Template HTML Basic</title>
+</head>
+
+<body>
+  <section id="home">
+    <!-- navigation bar start -->
+    <div class="navwrapper">
+      <ul class="navigation">
+        <li class="nav">
+          <a href="#home" class="navlink" id="homeNav">HOME</a>
+        </li>
+        <li class="nav">
+          <a href="#start" class="navlink" id="startNav">START</a>
+        </li>
+        <li class="nav">
+          <a href="#profil" class="navlink" id="profilNav">PROFIL</a>
+        </li>
+        <li class="nav">
+          <a href="#reward" class="navlink" id="rewardNav">REWARD</a>
+        </li>
+        <li class="nav">
+          <button onclick="logout()" id="logoutForm"><strong>Logout</strong></button>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="container">
+      <div class="contentwrapper">
+        <div class="mybg d-flex align-items-center">
+          <div class="containerdua">
+            <div class="col-6">
+              <h1 class="title text-warning">SELAMAT DATANG</h1>
+              <p class="description"><strong> Games roll emoji, dapatkan banyak rewardnya dengan game ini kalian juga
+                  bisa mengisi waktu kosong lebih bermanfaat 😁😁</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="title text-dark" id="title">Register Here</div>
+        <div id="registerForm">
+          <input type="text" placeholder="Username" id="username" />
+        </div>
+        <div class="btnRegis" id="registButton">
+          <button onclick="register()">Register</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="start">
+    <div class="container red">
+      <div class="gamewrapper">
+        <div class="kotak">
+          <div class="box" id="box1"></div>
+        </div>
+        <div class="kotak">
+          <div class="box" id="box2"></div>
+        </div>
+        <div class="kotak">
+          <div class="box" id="box3"></div>
+        </div>
+      </div>
+      <div class="buttonwrapper">
+        <button class="startButton" id="startButton" onclick="start()">START</button>
+      </div>
+      <div id="loser">Selamat Anda Kalah! 😈😈😈</div>
+    </div>
+  </section>
+
+  <section id="profil">
+    <div>
+      <div class="containerprofil">
+        <div class="profilwrapper">
+          <h3>My Profil</h3>
+        </div>
+        <div class="wrapper">
+          <h3>Edit your profil</h3>
+          <form action="">
+            <p>
+              <label for="">Your name</label>
+              <input type="text" id="isi" />
+            </p>
+            <p>
+              <label for="">Email</label>
+              <input type="email" />
+            </p>
+            <p class="input-file-wrapper">
+              <label for="upload">Avatar</label>
+              <input type="file" name="" id="upload" />
+            </p>
+            <p>
+              <button id="saveButton" onclick="save()">Save</button>
+            </p>
+          </form>
+        </div>
+        <!-- <div class="buttonlogout">
+          <button onclick="logout()" id="logoutForm"><strong>Logout</strong></button>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <section id="reward">
+    <div class="container blue">
+      <div class="contentwrapper" id="imgReward">
+        <h1>👇 REWARD BUAT ANDA 👇</h1>
+      </div>
+    </div>
+  </section>
+  <div class="top" id="top" onclick="directing()">☝</div>
+  <script>
+    function directing() {
+      location.href = "#home";
+    }
+  </script>
+  <script src="module/Player.js"></script>
+  <script src="init.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>
